@@ -209,16 +209,18 @@ a {
   position: sticky;
   top: 2rem;
   text-align: center;
-  font-size: clamp(4.5rem, 14vw, 8rem);
-  letter-spacing: 0.65em;
-  text-indent: 0.65em;
-  font-weight: 700;
+  font-family: 'Cinzel', serif;
+  font-size: clamp(5rem, 16vw, 9rem);
+  letter-spacing: 1.2em;
+  text-indent: 1.2em;
+  font-weight: 600;
   text-transform: uppercase;
-  background: linear-gradient(180deg, #ffffff 0%, #e8e8e8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.15));
+  color: #ffffff;
+  text-shadow:
+    0 0 60px rgba(255, 255, 255, 0.25),
+    0 0 30px rgba(150, 150, 200, 0.15),
+    0 8px 20px rgba(0, 0, 0, 0.4);
+  letter-spacing: 1.2em;
 }
 
 .gods-wrapper {
