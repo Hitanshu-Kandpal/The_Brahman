@@ -243,10 +243,10 @@ a {
   margin-bottom: 35vh;
   cursor: pointer;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(30px);
   transition:
-    transform 420ms ease,
-    opacity 420ms ease;
+    transform 680ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 680ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .god-presence-visible {
