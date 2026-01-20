@@ -220,7 +220,7 @@ a {
     0 0 60px rgba(255, 255, 255, 0.25),
     0 0 30px rgba(150, 150, 200, 0.15),
     0 8px 20px rgba(0, 0, 0, 0.4);
-  letter-spacing: 1.2em;
+  transition: transform 120ms linear;
 }
 
 .gods-wrapper {
