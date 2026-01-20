@@ -207,9 +207,16 @@ a {
   position: sticky;
   top: 2rem;
   text-align: center;
-  font-size: clamp(4rem, 13vw, 7rem);
-  letter-spacing: 0.55em;
-  text-indent: 0.55em;
+  font-size: clamp(4.5rem, 14vw, 8rem);
+  letter-spacing: 0.65em;
+  text-indent: 0.65em;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #ffffff 0%, #e8e8e8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.15));
 }
 
 .gods-wrapper {
