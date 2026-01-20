@@ -343,11 +343,18 @@ a {
 .god-float-title {
   text-transform: none;
   letter-spacing: 0.08em;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 1;
+  line-height: 1.4;
 }
 
 .god-float-description {
-  opacity: 0.85;
+  opacity: 0.8;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
 }
 
 /* Background layers */
