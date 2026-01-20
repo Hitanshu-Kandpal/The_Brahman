@@ -307,11 +307,13 @@ a {
 }
 
 .god-presence:hover .god-avatar {
-  transform: scale(1.06);
-  border-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.08);
+  border-color: rgba(255, 255, 255, 0.4);
   box-shadow:
-    0 32px 90px rgba(0, 0, 0, 0.9),
-    0 0 55px rgba(255, 255, 255, 0.35);
+    0 40px 110px rgba(0, 0, 0, 0.95),
+    0 0 70px rgba(255, 255, 255, 0.45),
+    0 0 40px rgba(255, 255, 255, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .god-float-text {
