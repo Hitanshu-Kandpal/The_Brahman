@@ -44,9 +44,15 @@ export function GodSection({
 
   const isRight = alignment === 'right';
 
+  const handleClick = () => {
+    sessionStorage.setItem('lastGod', god.id);
+    navigate(`/god/${god.id}`);
+  };
+
   return (
     <div
       ref={ref}
+      id={`god-${god.id}`}   // ⭐ IMPORTANT: for scroll-back
       className={`god-presence ${isRight ? 'god-right' : 'god-left'} ${
         hasEntered ? 'god-presence-visible' : ''
       } ${isActive ? 'god-presence-active' : ''}`}
@@ -55,7 +61,7 @@ export function GodSection({
         className="god-avatar-wrapper"
         onMouseEnter={onHover}
         onMouseLeave={onLeave}
-        onClick={() => navigate(`/god/${god.id}`)}
+        onClick={handleClick}
       >
         <div className="god-avatar">
           <img

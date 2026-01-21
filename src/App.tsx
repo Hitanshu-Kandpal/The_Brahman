@@ -108,6 +108,20 @@ function Home() {
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
   const moodGod = hoveredGod ?? focusedGod;
+  useEffect(() => {
+  const lastGod = sessionStorage.getItem('lastGod');
+  if (!lastGod) return;
+
+  const el = document.getElementById(`god-${lastGod}`);
+  if (el) {
+    setTimeout(() => {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 300);
+  }
+
+  sessionStorage.removeItem('lastGod');
+}, []);
+
 
   const moodColors: Record<GodId, string> = {
     shiva: 'rgba(127, 90, 240, 0.45)',
