@@ -42,6 +42,7 @@ a {
   z-index: 1;
   color: inherit;
   background: transparent;
+  letter-spacing: 0.02em;
 }
 
 /* mood-color overlay kept very light now; main look comes from bg-layers images */
