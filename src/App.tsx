@@ -184,6 +184,7 @@ function Home() {
             );
           })}
         </section>
+        <DivineSelectionRow gods={GODS} />
         <footer className="brahman-credit">
           <p>A project by Hitanshu Kandpal</p>
         </footer>
