@@ -14,3 +14,4 @@ Tips:
 - Backgrounds: 16:9 or wider, >= 1920x1080, darker top area helps header readability.
 - Avatars: square images; we'll crop to a circle automatically.
 
+

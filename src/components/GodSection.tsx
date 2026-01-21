@@ -25,30 +25,21 @@ export function GodSection({
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const element = ref.current;
-    if (!element) return;
+    const el = ref.current;
+    if (!el) return;
 
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setHasEntered(true);
-            onInView();
-          }
-        });
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setHasEntered(true);
+          onInView();
+        }
       },
-      {
-        threshold: 0.1,
-        rootMargin: '0px 0px -5% 0px',
-      }
+      { threshold: 0.15 }
     );
 
-    observer.observe(element);
-
-    return () => {
-      observer.unobserve(element);
-      observer.disconnect();
-    };
+    observer.observe(el);
+    return () => observer.disconnect();
   }, [onInView]);
 
   const isRight = alignment === 'right';
@@ -56,7 +47,6 @@ export function GodSection({
   return (
     <div
       ref={ref}
-      id={god.id === 'shiva' ? 'gods' : undefined}
       className={`god-presence ${isRight ? 'god-right' : 'god-left'} ${
         hasEntered ? 'god-presence-visible' : ''
       } ${isActive ? 'god-presence-active' : ''}`}
@@ -69,19 +59,19 @@ export function GodSection({
       >
         <div className="god-avatar">
           <img
-            className="god-avatar-img"
             src={god.avatarSrc}
             alt={god.name}
+            className="god-avatar-img"
           />
         </div>
         <div className="god-name-label">{god.name}</div>
       </div>
 
       <div className="god-float-text">
-        <Typography variant="subtitle2" className="god-float-title">
+        <Typography className="god-float-title">
           {god.title}
         </Typography>
-        <Typography variant="body2" className="god-float-description">
+        <Typography className="god-float-description">
           {god.description}
         </Typography>
       </div>
