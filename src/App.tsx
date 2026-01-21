@@ -238,6 +238,7 @@ function GodChatWrapper() {
 export function App() {
   return (
     <BrowserRouter>
+      <AmbientAudio />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/god/:name" element={<GodChatWrapper />} />
