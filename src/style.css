@@ -52,6 +52,9 @@ a {
   z-index: 10;
   padding: 2rem 2.5rem;
   pointer-events: none;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.15) 100%);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .brahman-header-inner {
