@@ -1121,24 +1121,31 @@ a {
 }
 
 .chat-thought-orb {
-  max-width: min(32rem, 75%);
-  padding: 1.8rem 2.2rem;
-  border-radius: 18px;
+  max-width: min(36rem, 80%);
+  padding: 2.2rem 2.8rem;
+  border-radius: 24px;
   position: relative;
   word-wrap: break-word;
-  backdrop-filter: blur(16px);
-  border: none;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .chat-message-god .chat-thought-orb {
-  max-width: min(36rem, 80%);
-  background: rgba(8, 6, 20, 0.5);
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+  max-width: min(40rem, 85%);
+  background: linear-gradient(135deg, rgba(8, 6, 20, 0.6) 0%, rgba(12, 8, 28, 0.5) 100%);
+  box-shadow:
+    0 8px 40px rgba(0, 0, 0, 0.5),
+    0 0 60px rgba(var(--god-accent-rgb, 127, 90, 240), 0.15),
+    0 0 100px rgba(var(--god-accent-rgb, 127, 90, 240), 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .chat-message-user .chat-thought-orb {
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 100%);
+  box-shadow:
+    0 6px 30px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(200, 220, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
 @keyframes godOrbGlow {
