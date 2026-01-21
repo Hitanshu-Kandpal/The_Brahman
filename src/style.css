@@ -365,15 +365,15 @@ a {
   0% {
     opacity: 0;
     transform: translate(-50%, -50%) scale(1.2);
-    filter: blur(12px) drop-shadow(0 0 40px rgba(255, 255, 255, 0.2));
+    filter: blur(12px);
   }
   50% {
-    filter: blur(4px) drop-shadow(0 0 60px rgba(200, 220, 255, 0.3));
+    filter: blur(4px);
   }
   100% {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
-    filter: blur(0px) drop-shadow(0 0 30px rgba(255, 255, 255, 0.4));
+    filter: blur(0px);
   }
 }
 
