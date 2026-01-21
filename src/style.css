@@ -1218,34 +1218,36 @@ a {
 
 .chat-thought-text {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-  line-height: 1.9;
-  letter-spacing: 0.04em;
-  font-weight: 400;
+  font-size: clamp(1.65rem, 3vw, 2.1rem);
+  line-height: 2;
+  letter-spacing: 0.06em;
+  font-weight: 300;
   color: inherit;
   margin: 0;
   text-rendering: optimizeLegibility;
+  word-spacing: 0.1em;
 }
 
 .chat-message-god .chat-thought-text {
   color: rgba(245, 245, 255, 0.98);
   text-shadow:
+    0 0 50px rgba(var(--god-accent-rgb, 127, 90, 240), 0.6),
     0 0 30px rgba(var(--god-accent-rgb, 127, 90, 240), 0.5),
-    0 0 20px rgba(var(--god-accent-rgb, 127, 90, 240), 0.4),
-    0 0 10px rgba(var(--god-accent-rgb, 127, 90, 240), 0.3),
-    0 2px 6px rgba(0, 0, 0, 0.4);
-  filter: drop-shadow(0 0 12px rgba(var(--god-accent-rgb, 127, 90, 240), 0.3));
+    0 0 15px rgba(var(--god-accent-rgb, 127, 90, 240), 0.4),
+    0 0 8px rgba(var(--god-accent-rgb, 127, 90, 240), 0.3),
+    0 2px 8px rgba(0, 0, 0, 0.4);
+  filter: drop-shadow(0 0 18px rgba(var(--god-accent-rgb, 127, 90, 240), 0.4));
   animation: godTextGlow 4s ease-in-out infinite;
 }
 
 .chat-message-user .chat-thought-text {
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(255, 255, 255, 0.97);
   text-shadow:
-    0 0 25px rgba(255, 255, 255, 0.3),
-    0 0 15px rgba(255, 255, 255, 0.25),
-    0 0 8px rgba(255, 255, 255, 0.2),
-    0 2px 6px rgba(0, 0, 0, 0.3);
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+    0 0 40px rgba(255, 255, 255, 0.4),
+    0 0 25px rgba(200, 220, 255, 0.3),
+    0 0 12px rgba(255, 255, 255, 0.25),
+    0 2px 6px rgba(0, 0, 0, 0.35);
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.25));
 }
 
 @keyframes godTextGlow {
