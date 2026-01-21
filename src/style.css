@@ -959,56 +959,61 @@ a {
 .chat-header-label {
   font-family: 'Cinzel', serif;
   letter-spacing: 0.3em;
-  font-size: 0.9rem;
-  opacity: 0.7;
+  font-size: 1rem;
+  opacity: 0.75;
   text-transform: uppercase;
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.85);
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.25));
 }
 
 .chat-header-name {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(3.5rem, 6vw, 4.5rem);
-  letter-spacing: 0.2em;
-  font-weight: 600;
-  margin-bottom: 1rem;
+  font-size: clamp(4.2rem, 8vw, 5.5rem);
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 1) 0%,
-    rgba(240, 245, 255, 0.95) 50%,
-    rgba(255, 255, 255, 0.9) 100%
+    rgba(240, 245, 255, 0.97) 50%,
+    rgba(255, 255, 255, 0.95) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow:
-    0 0 60px rgba(255, 255, 255, 0.4),
-    0 0 40px rgba(200, 220, 255, 0.3),
-    0 0 20px rgba(255, 255, 255, 0.2);
-  filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.3));
+    0 0 80px rgba(255, 255, 255, 0.5),
+    0 0 50px rgba(200, 220, 255, 0.4),
+    0 0 30px rgba(150, 180, 255, 0.3),
+    0 0 15px rgba(255, 255, 255, 0.2);
+  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.4));
   animation: chatNameGlow 4s ease-in-out infinite;
+  line-height: 1;
 }
 
 .chat-header-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-  letter-spacing: 0.1em;
-  font-weight: 400;
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  letter-spacing: 0.12em;
+  font-weight: 300;
   font-style: italic;
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.9) 0%,
-    rgba(240, 245, 255, 0.8) 100%
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(240, 245, 255, 0.85) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
-  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.2));
+  text-shadow:
+    0 0 40px rgba(255, 255, 255, 0.35),
+    0 0 25px rgba(200, 220, 255, 0.25);
+  filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.3));
+  animation: quoteGlow 4s ease-in-out infinite;
 }
 
 @keyframes chatNameGlow {
