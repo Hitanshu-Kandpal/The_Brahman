@@ -391,24 +391,25 @@ a {
 
 .brahman-intro-paragraph {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
-  line-height: 1.5;
-  letter-spacing: 0.05em;
-  font-weight: 700;
+  font-size: clamp(2.8rem, 6.5vw, 4.5rem);
+  line-height: 1.9;
+  letter-spacing: 0.08em;
+  font-weight: 500;
   font-style: italic;
   margin: 0;
-  margin-bottom: 3rem;
-  padding: 8vh 0;
+  margin-bottom: 2.5rem;
+  padding: 6vh 0;
   opacity: 0;
   text-align: center;
-  color: rgba(255, 255, 255, 0.98);
+  color: rgba(255, 255, 255, 0.97);
   text-shadow:
-    0 0 40px rgba(255, 255, 255, 0.4),
-    0 0 25px rgba(200, 220, 255, 0.3),
-    0 0 15px rgba(255, 255, 255, 0.2);
-  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.25));
-  transition: opacity 100ms ease-out;
+    0 0 50px rgba(255, 255, 255, 0.45),
+    0 0 30px rgba(200, 220, 255, 0.35),
+    0 0 20px rgba(255, 255, 255, 0.25);
+  filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.3));
+  transition: opacity 150ms ease-out;
   will-change: opacity;
+  word-spacing: 0.15em;
 }
 
 .brahman-intro-spacer {
