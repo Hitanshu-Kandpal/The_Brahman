@@ -318,23 +318,25 @@ a {
   justify-content: center;
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 .brahman-cinematic-title {
-  position: sticky;
+  position: fixed;
   top: 50%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  transform: translateY(-50%);
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  transform: translate(-50%, -50%);
   transform-origin: center center;
   font-family: 'Cinzel', serif;
-  font-size: clamp(6.24rem, 18.72vw, 11.7rem); /* ~20% larger than previous */
-  letter-spacing: 0.25em;
+  font-size: clamp(7.2rem, 20vw, 13rem);
+  letter-spacing: 0.3em;
   text-align: center;
-  text-indent: 0;
+  text-indent: 0.3em;
   font-weight: 700;
   text-transform: uppercase;
+  white-space: nowrap;
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 1) 0%,
@@ -345,26 +347,30 @@ a {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow:
-    0 0 80px rgba(255, 255, 255, 0.4),
-    0 0 50px rgba(150, 180, 255, 0.3),
-    0 0 30px rgba(200, 220, 255, 0.2);
-  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+    0 0 100px rgba(255, 255, 255, 0.5),
+    0 0 60px rgba(150, 180, 255, 0.4),
+    0 0 40px rgba(200, 220, 255, 0.3);
+  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.4));
   will-change: transform, opacity, filter;
   opacity: 0;
-  animation: brahmanReveal 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s forwards;
+  animation: brahmanReveal 4s cubic-bezier(0.2, 0.55, 0.4, 0.95) 0.6s forwards;
   z-index: 2;
+  pointer-events: none;
 }
 
 @keyframes brahmanReveal {
   0% {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(1.15);
-    filter: blur(8px) drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+    transform: translate(-50%, -50%) scale(1.2);
+    filter: blur(12px) drop-shadow(0 0 40px rgba(255, 255, 255, 0.2));
+  }
+  50% {
+    filter: blur(4px) drop-shadow(0 0 60px rgba(200, 220, 255, 0.3));
   }
   100% {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
-    filter: blur(0px) drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+    filter: blur(0px) drop-shadow(0 0 30px rgba(255, 255, 255, 0.4));
   }
 }
 
