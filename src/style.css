@@ -590,7 +590,7 @@ a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  max-width: 520px;
+  max-width: 560px;
   opacity: 0;
   transform-origin: center;
   pointer-events: none;
@@ -605,12 +605,12 @@ a {
 }
 
 .god-left .god-float-text {
-  right: calc(12% + 320px);
+  right: calc(12% + 360px);
   text-align: left;
 }
 
 .god-right .god-float-text {
-  left: calc(12% + 320px);
+  left: calc(12% + 360px);
   text-align: right;
 }
 
