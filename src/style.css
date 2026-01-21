@@ -330,13 +330,14 @@ a {
   transform: translate(-50%, -50%);
   transform-origin: center center;
   font-family: 'Cinzel', serif;
-  font-size: clamp(7.2rem, 18vw, 12rem);
-  letter-spacing: 0.25em;
+  font-size: clamp(5rem, 16vw, 10.5rem);
+  letter-spacing: 0.18em;
   text-align: center;
   text-indent: 0;
   font-weight: 700;
   text-transform: uppercase;
-  max-width: 95vw;
+  max-width: 96vw;
+  overflow: hidden;
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 1) 0%,
