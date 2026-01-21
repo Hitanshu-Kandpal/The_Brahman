@@ -1035,9 +1035,10 @@ a {
   overflow-y: auto;
   overflow-x: hidden;
   position: relative;
-  padding: 3rem 1.5rem;
+  padding: 4rem 1.5rem;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  background: radial-gradient(circle at 50% 50%, rgba(150, 180, 255, 0.03) 0%, transparent 80%);
 }
 
 /* Removed dark overlays - no black box around chat */
