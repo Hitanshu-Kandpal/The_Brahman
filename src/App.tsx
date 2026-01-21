@@ -8,6 +8,7 @@ import { BackgroundLayers } from './components/BackgroundLayers';
 import { CinematicEntry } from './components/CinematicEntry';
 import { QuoteSection } from './components/QuoteSection';
 import { Introduction } from './components/Introduction';
+import { DivineSelectionRow } from './components/DivineSelectionRow';
 import AmbientAudio from './components/AmbientAudio';
 
 
@@ -243,4 +244,3 @@ export function App() {
     </BrowserRouter>
   );
 }
-
