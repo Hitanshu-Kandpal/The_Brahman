@@ -473,8 +473,8 @@ a {
 
 .god-presence {
   position: relative;
-  min-height: 100vh;
-  margin-bottom: 40vh;
+  min-height: 110vh;
+  margin-bottom: 45vh;
   cursor: pointer;
   opacity: 0;
   transform: translateY(80px) scale(0.15);
