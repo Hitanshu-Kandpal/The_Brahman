@@ -141,7 +141,6 @@ function Home() {
         overlaySrc={overlayBackground}
         overlayKey={hoveredGod ?? 'none'}
       />
-      <AmbientAudio />
       <header className="brahman-header position-fixed top-0 start-0 end-0" style={{ opacity: headerScale < 0.5 ? 1 : 0 }}>
         <div className="brahman-header-inner">
           <span className="brahman-logo" style={{ transform: `scale(${headerScale < 0.5 ? 1 : headerScale * 2})` }}>
