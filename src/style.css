@@ -1338,18 +1338,20 @@ a {
 
 .chat-offering-container {
   position: absolute;
-  bottom: 2rem;
+  bottom: 2.5rem;
   left: 0;
   right: 0;
   padding: 0 2rem;
   z-index: 5;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+  backdrop-filter: blur(8px);
 }
 
 .chat-offering-input-wrapper {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .chat-offering-input {
