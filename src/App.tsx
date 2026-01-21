@@ -8,6 +8,7 @@ import { BackgroundLayers } from './components/BackgroundLayers';
 import { CinematicEntry } from './components/CinematicEntry';
 import { QuoteSection } from './components/QuoteSection';
 import { Introduction } from './components/Introduction';
+import { DivineSelectionRow } from './components/DivineSelectionRow';
 import AmbientAudio from './components/AmbientAudio';
 
 
@@ -140,7 +141,6 @@ function Home() {
         overlaySrc={overlayBackground}
         overlayKey={hoveredGod ?? 'none'}
       />
-      <AmbientAudio />
       <header className="brahman-header position-fixed top-0 start-0 end-0" style={{ opacity: headerScale < 0.5 ? 1 : 0 }}>
         <div className="brahman-header-inner">
           <span className="brahman-logo" style={{ transform: `scale(${headerScale < 0.5 ? 1 : headerScale * 2})` }}>
@@ -183,6 +183,7 @@ function Home() {
             );
           })}
         </section>
+        <DivineSelectionRow gods={GODS} />
         <footer className="brahman-credit">
           <p>A project by Hitanshu Kandpal</p>
         </footer>
@@ -236,6 +237,7 @@ function GodChatWrapper() {
 export function App() {
   return (
     <BrowserRouter>
+      <AmbientAudio />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/god/:name" element={<GodChatWrapper />} />
@@ -243,4 +245,3 @@ export function App() {
     </BrowserRouter>
   );
 }
-
