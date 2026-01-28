@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
-import { Button, TextField, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
+
 import type { GodConfig } from '../App';
 
 interface ChatPanelProps {

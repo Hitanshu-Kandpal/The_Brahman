@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 
 interface QuoteSectionProps {
   quote: string;
-  alignment?: 'left' | 'right';
+  alignment?: 'left' | 'right' | 'center';
 }
 
 export function QuoteSection({ quote, alignment = 'center' }: QuoteSectionProps) {
