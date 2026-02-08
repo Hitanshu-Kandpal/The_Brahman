@@ -68,7 +68,10 @@ export default function AmbientAudio() {
 
     setActiveDeity(deity);
     audioRef.current.src = TRACKS[deity].src;
+    audioRef.current.muted = false;
     audioRef.current.play().catch(() => {});
+    if (!hasStarted) setHasStarted(true);
+    setMuted(false);
     setOpen(false);
   };
 
