@@ -49,7 +49,7 @@ export default function AmbientAudio() {
 
   return (
     <>
-      <audio ref={audioRef} src={TRACKS[activeDeity].src} loop />
+      <audio ref={audioRef} src={TRACKS[activeDeity].src} loop muted={muted} />
 
       <div className="ambient-audio-wrapper">
         <button
