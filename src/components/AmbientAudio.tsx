@@ -22,13 +22,33 @@ export default function AmbientAudio() {
   const [muted, setMuted] = useState(false);
   const [open, setOpen] = useState(false);
   const [activeDeity, setActiveDeity] = useState<Deity>('krishna');
+  const [hasStarted, setHasStarted] = useState(false);
 
+  // Initial autoplay attempt on mount
   useEffect(() => {
-    if (!audioRef.current) return;
+    const playAudio = async () => {
+      if (!audioRef.current) return;
+      audioRef.current.volume = 0.4;
+      audioRef.current.muted = false;
+      try {
+        await audioRef.current.play();
+        setHasStarted(true);
+      } catch (err) {
+        // Autoplay blocked - will play on first user interaction
+      }
+    };
+
+    const timer = setTimeout(playAudio, 100);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // When track changes, play the new track
+  useEffect(() => {
+    if (!audioRef.current || !hasStarted) return;
     audioRef.current.volume = 0.4;
     audioRef.current.muted = false;
     audioRef.current.play().catch(() => {});
-  }, [activeDeity]);
+  }, [activeDeity, hasStarted]);
 
   const toggleMute = () => {
     if (!audioRef.current) return;
