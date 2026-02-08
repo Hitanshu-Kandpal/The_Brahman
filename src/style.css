@@ -502,10 +502,11 @@ a {
   max-width: 1200px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
+  justify-content: center;
+  gap: 1.5rem;
   pointer-events: auto;
   position: relative;
+  padding: 0 2rem;
 }
 
 .god-avatar-wrapper {
