@@ -7,7 +7,7 @@ interface CinematicEntryProps {
 export function CinematicEntry({ onScrollProgress }: CinematicEntryProps) {
   const titleRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [lineOpacities, setLineOpacities] = useState<number>(1);
+  const [lineOpacities, setLineOpacities] = useState<number>(0);
 
   useEffect(() => {
     const handleScroll = () => {
