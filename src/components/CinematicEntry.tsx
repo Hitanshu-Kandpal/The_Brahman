@@ -55,9 +55,11 @@ export function CinematicEntry({ onScrollProgress }: CinematicEntryProps) {
 
   return (
     <div ref={containerRef} className="cinematic-entry">
-      <div ref={titleRef} className="brahman-cinematic-title" style={{ opacity: lineOpacities }}>
-        BRAHMAN
-      </div>
+      {isVisible && (
+        <div ref={titleRef} className="brahman-cinematic-title" style={{ opacity: lineOpacities }}>
+          BRAHMAN
+        </div>
+      )}
     </div>
   );
 }
