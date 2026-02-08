@@ -57,29 +57,31 @@ export function GodSection({
         hasEntered ? 'god-presence-visible' : ''
       } ${isActive ? 'god-presence-active' : ''}`}
     >
-      <div
-        className="god-avatar-wrapper"
-        onMouseEnter={onHover}
-        onMouseLeave={onLeave}
-        onClick={handleClick}
-      >
-        <div className="god-avatar">
-          <img
-            src={god.avatarSrc}
-            alt={god.name}
-            className="god-avatar-img"
-          />
+      <div className="god-content-wrapper">
+        <div
+          className="god-avatar-wrapper"
+          onMouseEnter={onHover}
+          onMouseLeave={onLeave}
+          onClick={handleClick}
+        >
+          <div className="god-avatar">
+            <img
+              src={god.avatarSrc}
+              alt={god.name}
+              className="god-avatar-img"
+            />
+          </div>
+          <div className="god-name-label">{god.name}</div>
         </div>
-        <div className="god-name-label">{god.name}</div>
-      </div>
 
-      <div className="god-float-text">
-        <Typography className="god-float-title">
-          {god.title}
-        </Typography>
-        <Typography className="god-float-description">
-          {god.description}
-        </Typography>
+        <div className="god-float-text">
+          <Typography className="god-float-title">
+            {god.title}
+          </Typography>
+          <Typography className="god-float-description">
+            {god.description}
+          </Typography>
+        </div>
       </div>
     </div>
   );
