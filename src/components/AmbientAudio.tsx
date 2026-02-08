@@ -53,9 +53,14 @@ export default function AmbientAudio() {
   const toggleMute = () => {
     if (!audioRef.current) return;
 
-    audioRef.current.muted = !muted;
-    if (muted) audioRef.current.play().catch(() => {});
-    setMuted(!muted);
+    const newMutedState = !muted;
+    audioRef.current.muted = newMutedState;
+
+    if (newMutedState === false) {
+      audioRef.current.play().catch(() => {});
+      if (!hasStarted) setHasStarted(true);
+    }
+    setMuted(newMutedState);
   };
 
   const changeTrack = (deity: Deity) => {
