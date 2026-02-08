@@ -8,6 +8,13 @@ export function CinematicEntry({ onScrollProgress }: CinematicEntryProps) {
   const titleRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [lineOpacities, setLineOpacities] = useState<number>(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Delay visibility for 2 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
