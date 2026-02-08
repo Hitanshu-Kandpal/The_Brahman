@@ -26,6 +26,7 @@ export default function AmbientAudio() {
   useEffect(() => {
     if (!audioRef.current) return;
     audioRef.current.volume = 0.4;
+    audioRef.current.muted = false;
     audioRef.current.play().catch(() => {});
   }, [activeDeity]);
 
