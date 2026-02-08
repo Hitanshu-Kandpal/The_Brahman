@@ -1604,6 +1604,19 @@ a {
     padding-inline: 1.2rem;
   }
 
+  .god-content-wrapper {
+    flex-direction: column !important;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  .god-left .god-float-text,
+  .god-right .god-float-text {
+    text-align: center;
+    padding: 0;
+    max-width: 100%;
+  }
+
   .chat-panel {
     padding: 2rem 1.25rem;
     height: calc(100vh - 100px);
