@@ -139,6 +139,14 @@ export function ChatPanel({ god }: ChatPanelProps) {
   const accentRgb = hexToRgb(god.accentColor);
   const groqApiKey = import.meta.env.VITE_GROQ_API_KEY as string | undefined;
 
+  useEffect(() => {
+    if (!groqApiKey) {
+      console.warn('ChatPanel: VITE_GROQ_API_KEY is missing from import.meta.env.');
+    } else {
+      console.info('ChatPanel: Groq API key loaded.', groqApiKey.slice(0, 6) + '...');
+    }
+  }, [groqApiKey]);
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -161,6 +169,7 @@ export function ChatPanel({ god }: ChatPanelProps) {
 
   const requestGroqReply = async (conversation: Message[], nextId: number) => {
     if (!groqApiKey) {
+      console.warn('ChatPanel: Falling back to local responses because Groq API key is unavailable.');
       const fallbackResponses = FALLBACK_RESPONSES[god.id];
       const fallbackText = fallbackResponses[nextId % fallbackResponses.length];
       appendGodMessage(fallbackText, nextId);
@@ -168,21 +177,26 @@ export function ChatPanel({ god }: ChatPanelProps) {
     }
 
     try {
+      const payload = {
+        model: GROQ_MODEL,
+        messages: buildGroqMessages(god, conversation),
+        temperature: 0.9,
+        max_tokens: 160,
+      };
+      console.info('ChatPanel: sending Groq request', { url: GROQ_API_URL, payload });
+
       const response = await fetch(GROQ_API_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${groqApiKey}`,
         },
-        body: JSON.stringify({
-          model: GROQ_MODEL,
-          messages: buildGroqMessages(god, conversation),
-          temperature: 0.9,
-          max_tokens: 160,
-        }),
+        body: JSON.stringify(payload),
       });
 
       if (!response.ok) {
+        const text = await response.text();
+        console.error('ChatPanel: Groq request failed', response.status, text);
         throw new Error(`Groq request failed with status ${response.status}`);
       }
 
@@ -196,8 +210,10 @@ export function ChatPanel({ god }: ChatPanelProps) {
         return;
       }
 
+      console.error('ChatPanel: Groq response missing message', data);
       throw new Error('Groq response did not contain a message.');
-    } catch {
+    } catch (error) {
+      console.error('ChatPanel: Groq request error', error);
       const fallbackResponses = FALLBACK_RESPONSES[god.id];
       const fallbackText = fallbackResponses[nextId % fallbackResponses.length];
       appendGodMessage(fallbackText, nextId);
