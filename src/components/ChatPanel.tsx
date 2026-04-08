@@ -1,6 +1,13 @@
+
 import { useEffect, useRef, useState, type CSSProperties, type KeyboardEventHandler } from 'react';
 import { Typography } from '@mui/material';
 import type { GodConfig, GodId } from '../App';
+
+import { useState, useRef, useEffect } from 'react';
+import { Typography } from '@mui/material';
+
+import type { GodConfig } from '../App';
+
 
 interface ChatPanelProps {
   god: GodConfig;
